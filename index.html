@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* h2 {
+        background-color: aqua;
+      } */
+    </style>
+  </head>
+  <body>
+    <article id="first">
+      <h2 id="firstHead">This is 1s Heading</h2>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia omnis
+        vitae doloremque molestiae eligendi rem suscipit ipsa consequatur,
+        beatae voluptates assumenda, amet distinctio, voluptatum corporis ullam
+        numquam repudiandae enim doloribus!
+      </p>
+    </article>
+    <article>
+      <h2>This is 2nd Heading</h2>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia omnis
+        vitae doloremque molestiae eligendi rem suscipit ipsa consequatur,
+        beatae voluptates assumenda, amet distinctio, voluptatum corporis ullam
+        numquam repudiandae enim doloribus!
+      </p>
+    </article>
+    <article>
+      <h2>This is 3rd Heading</h2>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia omnis
+        vitae doloremque molestiae eligendi rem suscipit ipsa consequatur,
+        beatae voluptates assumenda, amet distinctio, voluptatum corporis ullam
+        numquam repudiandae enim doloribus!
+      </p>
+    </article>
+
+    <!-- <script src="./script.js"></script> -->
+    <script>
+      const tagName = document.getElementsByTagName("h2");
+      const articleTag = document.getElementsByTagName("article");
+      const firstElement = document.getElementById("first");
+      const head = document.getElementById("firstHead");
+      head.style.background = "green";
+      head.style.textAlign = "center";
+      head.innerText = "Change the text from js";
+      head.innerHTML = "<p>hi</p>";
+      console.log(head);
+
+      //       for (let n of articleTag) {
+      //         console.log(n);
+      //       }
+    </script>
+  </body>
+</html>

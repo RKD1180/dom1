@@ -1,0 +1,6 @@
+23-23.
+way of add js file in html
+what is dom
+get document in js
+get document data by tag name,class id
+give style with js
