@@ -6,56 +6,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-    <style>
+    <!-- <style>
       h2 {
         background-color: aqua;
       }
-    </style>
+    </style> -->
   </head>
   <body>
-    <article id="first">
-      <h2 id="firstHead">This is 1s Heading</h2>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia omnis
-        vitae doloremque molestiae eligendi rem suscipit ipsa consequatur,
-        beatae voluptates assumenda, amet distinctio, voluptatum corporis ullam
-        numquam repudiandae enim doloribus!
-      </p>
-    </article>
-    <article>
-      <h2>This is 2nd Heading</h2>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia omnis
-        vitae doloremque molestiae eligendi rem suscipit ipsa consequatur,
-        beatae voluptates assumenda, amet distinctio, voluptatum corporis ullam
-        numquam repudiandae enim doloribus!
-      </p>
-    </article>
-    <article>
-      <h2>This is 3rd Heading</h2>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia omnis
-        vitae doloremque molestiae eligendi rem suscipit ipsa consequatur,
-        beatae voluptates assumenda, amet distinctio, voluptatum corporis ullam
-        numquam repudiandae enim doloribus!
-      </p>
-    </article>
+    <div>
+      <h2>My Blog list</h2>
+      <ul id="ulList">
+        <li>Blog 1</li>
+        <li>Blog 2</li>
+        <li>Blog 3</li>
+        <li>Blog 4</li>
+      </ul>
+    </div>
+    <div id="blogs">
+      <article class="blog">
+        <h2 id="firstHead">This is 1s Heading</h2>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
+          omnis vitae doloremque molestiae eligendi rem suscipit ipsa
+          consequatur, beatae voluptates assumenda, amet distinctio, voluptatum
+          corporis ullam numquam repudiandae enim doloribus!
+        </p>
+      </article>
+      <article class="blog">
+        <h2>This is 2nd Heading</h2>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
+          omnis vitae doloremque molestiae eligendi rem suscipit ipsa
+          consequatur, beatae voluptates assumenda, amet distinctio, voluptatum
+          corporis ullam numquam repudiandae enim doloribus!
+        </p>
+      </article>
+      <article class="blog">
+        <h2>This is 3rd Heading</h2>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
+          omnis vitae doloremque molestiae eligendi rem suscipit ipsa
+          consequatur, beatae voluptates assumenda, amet distinctio, voluptatum
+          corporis ullam numquam repudiandae enim doloribus!
+        </p>
+      </article>
+    </div>
 
     <!-- <script src="./script.js"></script> -->
     <script>
-      const tagName = document.getElementsByTagName("h2");
-      const articleTag = document.getElementsByTagName("article");
-      const firstElement = document.getElementById("first");
-      const head = document.getElementById("firstHead");
-      head.style.background = "green";
-      head.style.textAlign = "center";
-      head.innerText = "Change the text from js";
-      head.innerHTML = "<p>hi</p>";
-      console.log(head);
+      // const tagName = document.getElementsByTagName("h2");
+      // const articleTag = document.getElementsByTagName("article");
+      // const firstElement = document.getElementById("first");
+      // const head = document.getElementById("firstHead");
+      // head.style.background = "green";
+      // head.style.textAlign = "center";
+      // head.innerText = "Change the text from js";
+      // head.innerHTML = "<p>hi</p>";
+      // console.log(head);
 
       //       for (let n of articleTag) {
       //         console.log(n);
       //       }
+
+      // const blogs = document.getElementsByClassName("blog");
+
+      // for (let blog of blogs) {
+      //   console.log(blog);
+      //   blog.style.backgroundColor = "aqua";
+      //   blog.style.border = "5px solid black";
+      //   blog.style.borderRadius = "5px";
+      //   blog.style.padding = "10px";
+      //   blog.style.margin = "10px";
+      // }
+
+      // first work
+      const ul = document.getElementById("ulList");
+      console.log(ul.childNodes);
+      // second work
+      const li = document.createElement("li");
+      li.innerText = "Blog 5";
+      // third work
+      ul.appendChild(li);
+
+      // console.log(
+      //   ul.removeChild(document.getElementById("ulList").childNodes[3])
+      // );
+
+      const blogs = document.getElementById("blogs");
+
+      const createArticle = document.createElement("article");
+      // add class name with js
+      createArticle.classList.add("blog");
+
+      const h2 = document.createElement("h2");
+      h2.innerText = "My blog 4";
+
+      const ptag = document.createElement("p");
+      ptag.innerText =
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia omnis vitae doloremque molestiae eligendi rem suscipit ipsa consequatur, beatae voluptates assumenda, amet distinctio, voluptatum corporis ullam numquam repudiandae enim doloribus!";
+
+      createArticle.appendChild(h2);
+      createArticle.appendChild(ptag);
+
+      blogs.appendChild(createArticle);
+
+      const byQuery = document.querySelectorAll(".blog h2");
+      console.log(byQuery);
+      for (let item of byQuery) {
+        item.style.backgroundColor = "aqua";
+      }
+      // createArticle.setAttribute("h2", "My blog 4");
+      // createArticle.setAttribute("p", "Hello");
+
+      // blogs.appendChild(createArticle);
     </script>
   </body>
 </html>

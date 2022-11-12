@@ -4,3 +4,10 @@ what is dom
 get document in js
 get document data by tag name,class id
 give style with js
+
+23-6/
+add daynamic style
+query selectorall
+NodeList, htmlcollection, setAttribute, parentNode, childnodes
+Create HTML elements using Javascript and appendChild
+
