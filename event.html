@@ -7,7 +7,12 @@
     <title>Document</title>
   </head>
   <body>
-    <h2>Hello</h2>
+    <h2 id="showname">Hello</h2>
+
+    <input id="name" type="text" />
+    <input id="name2" type="text" />
+    <button onclick="getName()">Get name</button>
+
     <button onclick="document.body.style.backgroundColor='black'">
       Make Dark BackGround
     </button>
@@ -15,16 +20,23 @@
     <button onclick="logName()">click</button>
     <button id="make-yellow">Make Yellow</button>
     <button id="make-Cyan">Make Yellow</button>
+    <button id="make-brown">Make Brown</button>
+    <button id="make-coral">Make coral</button>
 
     <script>
-      const getCyanId = document.getElementById("make-Cyan");
+      const getNameInputField = document.getElementById("name");
+      const getNameInputField2 = document.getElementById("name2");
+      const showname = document.getElementById("showname");
 
-      getCyanId.addEventListener("click", makeCyan);
-
-      function makeCyan() {
-        document.body.style.backgroundColor = "Cyan";
+      function getName() {
+        console.log(typeof getNameInputField.value);
+        console.log(typeof getNameInputField2.value);
+        // showname.innerText = getNameInputField.value;
+        // showname.innerText = getNameInputField2.value;
+        // console.log(getNameInputField.value);
+        // console.log(showname.innerText);
       }
     </script>
-    <script src="./script.js"></script>
+    <!-- <script src="./script.js"></script> -->
   </body>
 </html>

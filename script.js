@@ -19,3 +19,24 @@ function makeYellow() {
 }
 
 // addeventlistener by click button
+const getCyanId = document.getElementById("make-Cyan");
+
+getCyanId.addEventListener("click", makeCyan);
+
+function makeCyan() {
+  document.body.style.backgroundColor = "Cyan";
+}
+
+const getCyanId2 = document.getElementById("make-brown");
+
+getCyanId.addEventListener("click", function makeBrown() {
+  document.body.style.backgroundColor = "brown";
+});
+
+document.getElementById("make-coral").addEventListener("click", function () {
+  document.body.style.backgroundColor = "coral";
+});
+
+// getCyanId.addEventListener("click", function () {
+//   document.body.style.backgroundColor = "brown";
+// });
