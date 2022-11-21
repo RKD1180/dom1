@@ -11,8 +11,12 @@ query selectorall
 NodeList, htmlcollection, setAttribute, parentNode, childnodes
 Create HTML elements using Javascript and appendChild
 
-24-1-
+24/1-24/5
 What is Event, different types of event in web
 Add onclick handler directly or via javascript
 Different ways to use addEventListener on a button
 Most common ways to set Event Handlers
+
+24/6-26/8
+create a comment box and display comment
+Simple github like delete confirmation button(focus,blur,key,change)
