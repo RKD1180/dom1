@@ -20,3 +20,7 @@ Most common ways to set Event Handlers
 24/6-26/8
 create a comment box and display comment
 Simple github like delete confirmation button(focus,blur,key,change)
+
+26/7 
+Event bubble and Stop propagating,immedieat
+Event delegate and benefit of Event bubble
