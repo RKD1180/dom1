@@ -5,49 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-      /* .liStyle {
-        color: red;
-      } */
-      #bazarList {
-        background-color: black;
-        padding: 30px;
-      }
-      #bazarList li {
-        color: white;
-      }
-    </style>
   </head>
   <body>
-    <h2>Bazar List</h2>
-    <ul id="bazarList">
-      <ul id="bazarList2">
-        <li>Item 2</li>
+    <h2>Event Bubble</h2>
+
+    <section id="itemlistSection">
+      <h3>This is list section</h3>
+      <!-- <ul id="itemList">
+        <li>Item 1</li>
+        <li id="item2">Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+      </ul> -->
+
+      <ul id="itemList">
+        <li class="item">Item 1</li>
+        <li class="item">Item 2</li>
+        <li class="item">Item 3</li>
+        <li class="item">Item 4</li>
       </ul>
+    </section>
 
-      <li class="liStyle">Item 1</li>
-    </ul>
-    <input type="text" id="itemInput" /><br /><br />
-    <button id="addItem">Add</button>
-
+    <!-- javascript -->
     <script>
-      const ulList = document.getElementById("bazarList");
-      const ulList2 = document.getElementById("bazarList2");
-      const inputValue = document.getElementById("itemInput");
-      //       console.log(ulList);
+      const itemlistSection = document.getElementById("itemlistSection");
+      const itemList = document.getElementById("itemList");
+      const item2 = document.getElementById("item2");
+      const items = document.getElementsByClassName("item");
 
-      document.getElementById("addItem").addEventListener("click", function () {
-        console.log(inputValue.value);
-
-        const newLi = document.createElement("li");
-        const newLi2 = document.createElement("li");
-        newLi.classList.add("liStyle");
-        newLi.innerText = inputValue.value;
-        newLi2.innerText = inputValue.value;
-
-        ulList.appendChild(newLi2);
-        ulList2.appendChild(newLi);
+      itemList.addEventListener("click", function (event) {
+        event.target.parentNode.removeChild(event.target);
       });
+
+      //       for (let item of items) {
+      //         item.addEventListener("click", function (event) {
+      //           //           itemList.removeChild(item);
+      //           //           event.target.style.textDecoration = " line-through";
+      //           event.target.parentNode.removeChild(item);
+      //         });
+      //       }
+
+      //       itemlistSection.addEventListener("click", function (event) {
+      //         console.log("item list Section is clicked");
+      //         event.stopImmediatePropagation();
+      //       });
+
+      //       itemList.addEventListener("click", function (event) {
+      //         console.log("Item list is clicked");
+      //                 event.stopImmediatePropagation();
+      //       });
+
+      //       item2.addEventListener("click", function (event) {
+      //         console.log("List item 2");
+      //                 event.stopImmediatePropagation();
+      //       });
     </script>
   </body>
 </html>
